@@ -1,126 +1,417 @@
+1791559501311_image.png
+1791559524248_image.png
+1791559654769_image.png
+1791559704868_image.png
+1791559715432_image.png
+1791559728449_image.png
+1791559742432_image.png
+1791559753888_image.png
+1791559764548_image.png
+
+Additional Context:
+Ran a command, updated memory
+
+Thanks, this changes the plan a bit. Your page needs a few additions before it matches the brief.
+
+What’s already fine: your bio is 508 characters including spaces. That’s under Appendix B’s 600-character limit for the “About” text, it’s in the first person, and you can reuse it for the showcase upload.
+
+What to fix:
+
+    Project info: the brief wants each project to include a poster image with the names of everyone who worked on it, a short synopsis, a description of the project brief, your role, the tech you used and a download link or QR code. Your cards only show a name and the jam. I’d make each card open its own project page on your site holding those items. The page for your chosen project can then double as your full write-up for today.
+    Missing items: the screenshots skip from 4e to 4h. Please send me 4f and 4g.
+    Domain name: the brief says that if you use a simple web tool such as Wix, you should invest in a bespoke domain. A GitHub Pages address ending in github.io may not count as that, and I can’t tell from the brief. The safe fix is to buy a cheap domain and point it at GitHub Pages, but you could also ask your lecturer before tonight’s deadline.
+    Image sizes: the 500×500px, 200–500KB images in Appendix B are separate uploads for the Showcase link. The 630×500 thumbnails I mentioned are only for your website. The headshot should be a .jpg between 200KB and 500KB at 72dpi, and you can use that same file on the site.
+    Headshot: the current photo is casual, with a busy background. Appendix B asks for an enticing, professional photo with careful lighting and background, so a cleaner shot would score better.
+    Curation: the rubric rewards exit-level standard and a diverse range of skills. All three of your current games are jam entries. Chairholder Value, or your procedural terrain project if you can show it, would back up the procedural generation line in your bio. If you keep the jam games, your refinement plan should say how you’ll improve them.
+
+The 15 October date in Appendix B is for the Showcase upload link. Tonight’s PDF goes to Arc.
+
+Which project do you want to use for the full write-up, and who else worked on it? Once I have that, I’ll build the project page.
+
+4f and g are minor things. The github is up but the images aren't linked in the page yet - I gave them the right names and put them in an image folder. https://github.com/EmberJones/EmberJones
+Read 2 pages, ran a command, shared files
+
+The images are probably failing because of a capital letter. Your repo folder is named Images, and my page pointed to images. GitHub Pages is case-sensitive, so it couldn’t find them. I’ve updated index.html so every path now starts with Images/.
+
+To fix the live site, upload the new index.html to the repo and replace the old one (Add file → Upload files, then commit). Pages usually updates within a minute or two.
+
+I can’t open the folder contents from here, so check that your file names and extensions match what the page expects exactly, including case:
+
+    headshot.jpg
+    icon-game-development.png
+    icon-game-design.png
+    icon-programming.png
+    game-2skate.png
+    game-office-has-2-fs.png
+    game-fwog.png
+
+If any of them differ, for example .jpeg or .PNG, either rename the file on GitHub or tell me and I’ll change the page to match.
+
+Your site’s address will be https://emberjones.github.io/EmberJones/ because the repo is named EmberJones. If you want the shorter https://emberjones.github.io, create a repo named EmberJones.github.io and move the files into it. That isn’t essential for tonight, though.
+
+Send me the live link once it loads and I’ll check it against the brief. Then tell me which project to use for the full write-up, and who worked on it, and I’ll build its project page.
+Index
+Code·HTML
+
+
+Claude is AI and can make mistakes.
+Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ember Jones | Game Developer Portfolio</title>
-<meta name="description" content="Ember Jones is a game developer based in Cape Town, South Africa, working in C#, C++, Unity and Unreal Engine.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#fdf6fa;--pink:#edbaba;--ink:#2d2d2d;--field:#f3f3f3}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{font:400 17px/27px Epilogue,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
-h1,h2,h3{font-weight:600}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ember Jones | Game Developer Portfolio</title>
+    <meta name="description" content="Ember Jones is a game developer based in Cape Town, South Africa, working in C#, C++, Unity and Unreal Engine.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fdf6fa;
+            --pink: #edbaba;
+            --ink: #2d2d2d;
+            --field: #f3f3f3
+        }
 
-.hero{max-width:1180px;margin:0 auto;padding:100px 50px;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.hero-text{flex:1 1 480px;max-width:557px}
-h1{font-size:clamp(34px,5vw,48px);line-height:1.25;margin-bottom:40px}
-.hero p+p{margin-top:27px}
-.photo{flex:0 1 495px;aspect-ratio:495/424;border:22px solid var(--pink);border-radius:250px;overflow:hidden;background:var(--pink)}
-.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:35% 25%}
+        * {
+            box-sizing: border-box;
+            margin: 0
+        }
 
-nav{background:var(--pink);min-height:80px;padding:0 50px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-nav .logo{font-size:20px;line-height:30px;font-weight:600;text-decoration:none}
-nav ul{list-style:none;padding:0;display:flex;gap:40px}
-nav ul a{text-decoration:none}
-nav ul a:hover{text-decoration:underline}
+        html {
+            scroll-behavior: smooth
+        }
 
-.skills{display:grid;grid-template-columns:repeat(3,minmax(0,250px));gap:125px;justify-content:center;padding:180px 24px;text-align:center}
-.skills img{width:130px;height:130px;object-fit:cover;margin-bottom:56px}
-h3{font-size:27px;line-height:42px;margin-bottom:19px}
+        @media (prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+        }
 
-#work{padding:20px 24px 0}
-h2{font-size:32px;line-height:42px}
-#work h2{text-align:center;margin-bottom:60px}
-.games{display:grid;grid-template-columns:repeat(3,minmax(0,315px));gap:67px;justify-content:center;margin-bottom:60px}
-.game{display:block;text-decoration:none}
-.game img{display:block;width:100%;aspect-ratio:63/50;object-fit:cover;background:var(--field);margin-bottom:25px}
-.game h3{font-size:20px;line-height:30px;margin-bottom:10px}
-.game:hover h3{text-decoration:underline}
+        body {
+            font: 400 17px/27px Epilogue,system-ui,sans-serif;
+            color: var(--ink);
+            background: var(--bg)
+        }
 
-footer{padding:0 24px 70px}
-.footer-inner{max-width:1000px;margin:0 auto;border-top:2px solid rgba(0,0,0,.2);padding-top:70px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:48px}
-.footer-inner h2{flex:1 1 280px;max-width:360px}
-.contact{flex:1 1 360px;max-width:530px;list-style:none;padding:0;display:grid;gap:20px}
-.contact li{background:var(--field);padding:21px 30px;display:flex;flex-wrap:wrap;gap:4px 16px}
-.contact span{min-width:70px}
-.contact a{overflow-wrap:anywhere}
-.button{display:inline-block;margin-top:20px;background:var(--ink);color:#fff;font-weight:600;font-size:20px;line-height:30px;padding:25px 82px;text-decoration:none}
-.button:hover{background:#000}
+        a {
+            color: inherit
+        }
 
-@media (max-width:900px){
- .hero{flex-direction:column;padding:56px 24px;align-items:stretch}
- .hero-text{max-width:none;flex:none}
- .photo{align-self:center;width:100%;max-width:420px;flex:none}
- nav{padding:0 24px}
- nav ul{gap:24px}
- .skills{grid-template-columns:1fr;gap:64px;padding:96px 24px}
- .games{grid-template-columns:minmax(0,420px);gap:48px}
- .button{padding:20px 48px}
-}
-</style>
+        :focus-visible {
+            outline: 3px solid var(--ink);
+            outline-offset: 3px
+        }
+
+        h1, h2, h3 {
+            font-weight: 600
+        }
+
+        .hero {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 100px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px
+        }
+
+        .hero-text {
+            flex: 1 1 480px;
+            max-width: 557px
+        }
+
+        h1 {
+            font-size: clamp(34px,5vw,48px);
+            line-height: 1.25;
+            margin-bottom: 40px
+        }
+
+        .hero p + p {
+            margin-top: 27px
+        }
+
+        .photo {
+            flex: 0 1 495px;
+            aspect-ratio: 495/424;
+            border: 22px solid var(--pink);
+            border-radius: 250px;
+            overflow: hidden;
+            background: var(--pink)
+        }
+
+            .photo img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 35% 25%
+            }
+
+        nav {
+            background: var(--pink);
+            min-height: 80px;
+            padding: 0 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px
+        }
+
+            nav .logo {
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 600;
+                text-decoration: none
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                gap: 40px
+            }
+
+                nav ul a {
+                    text-decoration: none
+                }
+
+                    nav ul a:hover {
+                        text-decoration: underline
+                    }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,250px));
+            gap: 125px;
+            justify-content: center;
+            padding: 180px 24px;
+            text-align: center
+        }
+
+            .skills img {
+                width: 130px;
+                height: 130px;
+                object-fit: cover;
+                margin-bottom: 56px
+            }
+
+        h3 {
+            font-size: 27px;
+            line-height: 42px;
+            margin-bottom: 19px
+        }
+
+        #work {
+            padding: 20px 24px 0
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 42px
+        }
+
+        #work h2 {
+            text-align: center;
+            margin-bottom: 60px
+        }
+
+        .games {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,315px));
+            gap: 67px;
+            justify-content: center;
+            margin-bottom: 60px
+        }
+
+        .game {
+            display: block;
+            text-decoration: none
+        }
+
+            .game img {
+                display: block;
+                width: 100%;
+                aspect-ratio: 63/50;
+                object-fit: cover;
+                background: var(--field);
+                margin-bottom: 25px
+            }
+
+            .game h3 {
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 10px
+            }
+
+            .game:hover h3 {
+                text-decoration: underline
+            }
+
+        footer {
+            padding: 0 24px 70px
+        }
+
+        .footer-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-top: 2px solid rgba(0,0,0,.2);
+            padding-top: 70px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 48px
+        }
+
+            .footer-inner h2 {
+                flex: 1 1 280px;
+                max-width: 360px
+            }
+
+        .contact {
+            flex: 1 1 360px;
+            max-width: 530px;
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 20px
+        }
+
+            .contact li {
+                background: var(--field);
+                padding: 21px 30px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px 16px
+            }
+
+            .contact span {
+                min-width: 70px
+            }
+
+            .contact a {
+                overflow-wrap: anywhere
+            }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            background: var(--ink);
+            color: #fff;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            padding: 25px 82px;
+            text-decoration: none
+        }
+
+            .button:hover {
+                background: #000
+            }
+
+        @media (max-width:900px) {
+            .hero {
+                flex-direction: column;
+                padding: 56px 24px;
+                align-items: stretch
+            }
+
+            .hero-text {
+                max-width: none;
+                flex: none
+            }
+
+            .photo {
+                align-self: center;
+                width: 100%;
+                max-width: 420px;
+                flex: none
+            }
+
+            nav {
+                padding: 0 24px
+            }
+
+                nav ul {
+                    gap: 24px
+                }
+
+            .skills {
+                grid-template-columns: 1fr;
+                gap: 64px;
+                padding: 96px 24px
+            }
+
+            .games {
+                grid-template-columns: minmax(0,420px);
+                gap: 48px
+            }
+
+            .button {
+                padding: 20px 48px
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="hero" id="about">
- <div class="hero-text">
-  <h1>Game Development Portfolio</h1>
-  <p>I’m Ember Jones, a programmer and game developer based in Cape Town, South Africa. I’m completing my BCIS in Game Design and Development at Vega and am open to work opportunities as a game developer.</p>
-  <p>Proficient in C# and C++, with experience in Unity and Unreal Engine, I enjoy collaborating with artists, composers and designers to bring shared ideas to life. I make silly, light-hearted games with offbeat mechanics, and I’m especially interested in procedural generation and storytelling through gameplay.</p>
- </div>
- <div class="photo"><img src="images/headshot.jpg" alt="Ember Jones smiling and giving a thumbs up"></div>
-</header>
+    <header class="hero" id="about">
+        <div class="hero-text">
+            <h1>Game Development Portfolio</h1>
+            <p>I’m Ember Jones, a programmer and game developer based in Cape Town, South Africa. I’m completing my BCIS in Game Design and Development at Vega and am open to work opportunities as a game developer.</p>
+            <p>Proficient in C# and C++, with experience in Unity and Unreal Engine, I enjoy collaborating with artists, composers and designers to bring shared ideas to life. I make silly, light-hearted games with offbeat mechanics, and I’m especially interested in procedural generation and storytelling through gameplay.</p>
+        </div>
+        <div class="photo"><img src="Images/headshot.jpg" alt="Ember Jones smiling and giving a thumbs up"></div>
+    </header>
 
-<nav aria-label="Main">
- <a class="logo" href="#about">Ember Jones</a>
- <ul>
-  <li><a href="#about">About</a></li>
-  <li><a href="#work">Work</a></li>
-  <li><a href="#contact">Contact</a></li>
- </ul>
-</nav>
+    <nav aria-label="Main">
+        <a class="logo" href="#about">Ember Jones</a>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<section class="skills" aria-label="Skills">
- <div><img src="images/icon-game-development.png" alt=""><h3>Game Development</h3><p>Experienced in Unity and Unreal Engine 5.</p></div>
- <div><img src="images/icon-game-design.png" alt=""><h3>Game Design</h3><p>Taken part in designing game prototypes in multiple game jams, mostly working on 3D physics-based simulators.</p></div>
- <div><img src="images/icon-programming.png" alt=""><h3>Programming</h3><p>Experienced in C++, C# and Java.</p></div>
-</section>
+    <section class="skills" aria-label="Skills">
+        <div><img src="Images/icon-game-development.png" alt=""><h3>Game Development</h3><p>Experienced in Unity and Unreal Engine 5.</p></div>
+        <div><img src="Images/icon-game-design.png" alt=""><h3>Game Design</h3><p>Taken part in designing game prototypes in multiple game jams, mostly working on 3D physics-based simulators.</p></div>
+        <div><img src="Images/icon-programming.png" alt=""><h3>Programming</h3><p>Experienced in C++, C# and Java.</p></div>
+    </section>
 
-<section id="work">
- <h2>My games</h2>
- <div class="games">
-  <a class="game" href="https://cragels.itch.io/2skate" target="_blank" rel="noopener">
-   <img src="images/game-2skate.png" alt="2Skate title screen with neon lettering">
-   <h3>2Skate</h3><p>2026 Physics Game Jam</p>
-  </a>
-  <a class="game" href="https://devillierscloete.itch.io/officehas2fs" target="_blank" rel="noopener">
-   <img src="images/game-office-has-2-fs.png" alt="Office Has 2 F’s cover art with two suited characters">
-   <h3>Office has 2 F’s</h3><p>The Campus Game Jam 2026</p>
-  </a>
-  <a class="game" href="https://emberjones.itch.io/fwog" target="_blank" rel="noopener">
-   <img src="images/game-fwog.png" alt="Fwog cover art showing a frog on a lily pad">
-   <h3>Fwog</h3><p>Makers Massive Monthly 8 Hour Jam</p>
-  </a>
- </div>
-</section>
+    <section id="work">
+        <h2>My games</h2>
+        <div class="games">
+            <a class="game" href="https://cragels.itch.io/2skate" target="_blank" rel="noopener">
+                <img src="Images/game-2skate.png" alt="2Skate title screen with neon lettering">
+                <h3>2Skate</h3><p>2026 Physics Game Jam</p>
+            </a>
+            <a class="game" href="https://devillierscloete.itch.io/officehas2fs" target="_blank" rel="noopener">
+                <img src="Images/game-office-has-2-fs.png" alt="Office Has 2 F’s cover art with two suited characters">
+                <h3>Office has 2 F’s</h3><p>The Campus Game Jam 2026</p>
+            </a>
+            <a class="game" href="https://emberjones.itch.io/fwog" target="_blank" rel="noopener">
+                <img src="Images/game-fwog.png" alt="Fwog cover art showing a frog on a lily pad">
+                <h3>Fwog</h3><p>Makers Massive Monthly 8 Hour Jam</p>
+            </a>
+        </div>
+    </section>
 
-<footer id="contact">
- <div class="footer-inner">
-  <h2>Let’s work together</h2>
-  <div>
-   <ul class="contact">
-    <li><span>Email</span><a href="mailto:emberwjones@gmail.com">emberwjones@gmail.com</a></li>
-    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ember-jones-5384682a9/" target="_blank" rel="noopener">linkedin.com/in/ember-jones-5384682a9</a></li>
-    <li><span>itch.io</span><a href="https://emberjones.itch.io/" target="_blank" rel="noopener">emberjones.itch.io</a></li>
-   </ul>
-   <a class="button" href="mailto:emberwjones@gmail.com">Email me</a>
-  </div>
- </div>
-</footer>
+    <footer id="contact">
+        <div class="footer-inner">
+            <h2>Let’s work together</h2>
+            <div>
+                <ul class="contact">
+                    <li><span>Email</span><a href="mailto:emberwjones@gmail.com">emberwjones@gmail.com</a></li>
+                    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ember-jones-5384682a9/" target="_blank" rel="noopener">linkedin.com/in/ember-jones-5384682a9</a></li>
+                    <li><span>itch.io</span><a href="https://emberjones.itch.io/" target="_blank" rel="noopener">emberjones.itch.io</a></li>
+                </ul>
+                <a class="button" href="mailto:emberwjones@gmail.com">Email me</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
+
+Claude finished the response
