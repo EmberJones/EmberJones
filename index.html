@@ -54,7 +54,7 @@
         .hero {
             max-width: 1180px;
             margin: 0 auto;
-            padding: 100px 50px;
+            padding: 100px 50px 40px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -130,10 +130,10 @@
 
         .skills {
             display: grid;
-            grid-template-columns: repeat(3,minmax(0,250px));
-            gap: 125px;
+            grid-template-columns: repeat(3,minmax(0,300px));
+            gap: 80px;
             justify-content: center;
-            padding: 180px 24px;
+            padding: 60px 24px 90px;
             text-align: center
         }
 
@@ -150,8 +150,26 @@
             margin-bottom: 19px
         }
 
+        .skills h3 {
+            font-size: clamp(22px,2.4vw,27px);
+            white-space: nowrap
+        }
+
+        .skills p {
+            max-width: 250px;
+            margin: 0 auto
+        }
+
+        .divider {
+            max-width: 1000px;
+            margin: 0 auto 90px;
+            border: 0;
+            border-top: 2px solid rgba(0,0,0,.2)
+        }
+
         #work {
-            padding: 20px 24px 0
+            padding: 0 24px;
+            scroll-margin-top: 20px
         }
 
         h2 {
@@ -169,7 +187,7 @@
             grid-template-columns: repeat(3,minmax(0,315px));
             gap: 67px;
             justify-content: center;
-            margin-bottom: 60px
+            margin-bottom: 120px
         }
 
         .game {
@@ -260,7 +278,7 @@
         @media (max-width:900px) {
             .hero {
                 flex-direction: column;
-                padding: 56px 24px;
+                padding: 56px 24px 32px;
                 align-items: stretch
             }
 
@@ -287,7 +305,15 @@
             .skills {
                 grid-template-columns: 1fr;
                 gap: 64px;
-                padding: 96px 24px
+                padding: 40px 24px 64px
+            }
+
+            .divider {
+                margin-bottom: 64px
+            }
+
+            .games {
+                margin-bottom: 80px
             }
 
             .games {
@@ -325,6 +351,8 @@
         <div><img src="Images/icon-game-design.png" alt=""><h3>Game Design</h3><p>Taken part in designing game prototypes in multiple game jams, mostly working on 3D physics-based simulators.</p></div>
         <div><img src="Images/icon-programming.png" alt=""><h3>Programming</h3><p>Experienced in C++, C# and Java.</p></div>
     </section>
+
+    <hr class="divider">
 
     <section id="work">
         <h2>My games</h2>
