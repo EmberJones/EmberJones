@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ember Jones | Game Developer Portfolio</title>
+<meta name="description" content="Ember Jones is a game developer based in Cape Town, South Africa, working in C#, C++, Unity and Unreal Engine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fdf6fa;--pink:#edbaba;--ink:#2d2d2d;--field:#f3f3f3}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font:400 17px/27px Epilogue,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+h1,h2,h3{font-weight:600}
+
+.hero{max-width:1180px;margin:0 auto;padding:100px 50px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.hero-text{flex:1 1 480px;max-width:557px}
+h1{font-size:clamp(34px,5vw,48px);line-height:1.25;margin-bottom:40px}
+.hero p+p{margin-top:27px}
+.photo{flex:0 1 495px;aspect-ratio:495/424;border:22px solid var(--pink);border-radius:250px;overflow:hidden;background:var(--pink)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:35% 25%}
+
+nav{background:var(--pink);min-height:80px;padding:0 50px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+nav .logo{font-size:20px;line-height:30px;font-weight:600;text-decoration:none}
+nav ul{list-style:none;padding:0;display:flex;gap:40px}
+nav ul a{text-decoration:none}
+nav ul a:hover{text-decoration:underline}
+
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,250px));gap:125px;justify-content:center;padding:180px 24px;text-align:center}
+.skills img{width:130px;height:130px;object-fit:cover;margin-bottom:56px}
+h3{font-size:27px;line-height:42px;margin-bottom:19px}
+
+#work{padding:20px 24px 0}
+h2{font-size:32px;line-height:42px}
+#work h2{text-align:center;margin-bottom:60px}
+.games{display:grid;grid-template-columns:repeat(3,minmax(0,315px));gap:67px;justify-content:center;margin-bottom:60px}
+.game{display:block;text-decoration:none}
+.game img{display:block;width:100%;aspect-ratio:63/50;object-fit:cover;background:var(--field);margin-bottom:25px}
+.game h3{font-size:20px;line-height:30px;margin-bottom:10px}
+.game:hover h3{text-decoration:underline}
+
+footer{padding:0 24px 70px}
+.footer-inner{max-width:1000px;margin:0 auto;border-top:2px solid rgba(0,0,0,.2);padding-top:70px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:48px}
+.footer-inner h2{flex:1 1 280px;max-width:360px}
+.contact{flex:1 1 360px;max-width:530px;list-style:none;padding:0;display:grid;gap:20px}
+.contact li{background:var(--field);padding:21px 30px;display:flex;flex-wrap:wrap;gap:4px 16px}
+.contact span{min-width:70px}
+.contact a{overflow-wrap:anywhere}
+.button{display:inline-block;margin-top:20px;background:var(--ink);color:#fff;font-weight:600;font-size:20px;line-height:30px;padding:25px 82px;text-decoration:none}
+.button:hover{background:#000}
+
+@media (max-width:900px){
+ .hero{flex-direction:column;padding:56px 24px;align-items:stretch}
+ .hero-text{max-width:none;flex:none}
+ .photo{align-self:center;width:100%;max-width:420px;flex:none}
+ nav{padding:0 24px}
+ nav ul{gap:24px}
+ .skills{grid-template-columns:1fr;gap:64px;padding:96px 24px}
+ .games{grid-template-columns:minmax(0,420px);gap:48px}
+ .button{padding:20px 48px}
+}
+</style>
+</head>
+<body>
+<header class="hero" id="about">
+ <div class="hero-text">
+  <h1>Game Development Portfolio</h1>
+  <p>I’m Ember Jones, a programmer and game developer based in Cape Town, South Africa. I’m completing my BCIS in Game Design and Development at Vega and am open to work opportunities as a game developer.</p>
+  <p>Proficient in C# and C++, with experience in Unity and Unreal Engine, I enjoy collaborating with artists, composers and designers to bring shared ideas to life. I make silly, light-hearted games with offbeat mechanics, and I’m especially interested in procedural generation and storytelling through gameplay.</p>
+ </div>
+ <div class="photo"><img src="images/headshot.jpg" alt="Ember Jones smiling and giving a thumbs up"></div>
+</header>
+
+<nav aria-label="Main">
+ <a class="logo" href="#about">Ember Jones</a>
+ <ul>
+  <li><a href="#about">About</a></li>
+  <li><a href="#work">Work</a></li>
+  <li><a href="#contact">Contact</a></li>
+ </ul>
+</nav>
+
+<section class="skills" aria-label="Skills">
+ <div><img src="images/icon-game-development.png" alt=""><h3>Game Development</h3><p>Experienced in Unity and Unreal Engine 5.</p></div>
+ <div><img src="images/icon-game-design.png" alt=""><h3>Game Design</h3><p>Taken part in designing game prototypes in multiple game jams, mostly working on 3D physics-based simulators.</p></div>
+ <div><img src="images/icon-programming.png" alt=""><h3>Programming</h3><p>Experienced in C++, C# and Java.</p></div>
+</section>
+
+<section id="work">
+ <h2>My games</h2>
+ <div class="games">
+  <a class="game" href="https://cragels.itch.io/2skate" target="_blank" rel="noopener">
+   <img src="images/game-2skate.png" alt="2Skate title screen with neon lettering">
+   <h3>2Skate</h3><p>2026 Physics Game Jam</p>
+  </a>
+  <a class="game" href="https://devillierscloete.itch.io/officehas2fs" target="_blank" rel="noopener">
+   <img src="images/game-office-has-2-fs.png" alt="Office Has 2 F’s cover art with two suited characters">
+   <h3>Office has 2 F’s</h3><p>The Campus Game Jam 2026</p>
+  </a>
+  <a class="game" href="https://emberjones.itch.io/fwog" target="_blank" rel="noopener">
+   <img src="images/game-fwog.png" alt="Fwog cover art showing a frog on a lily pad">
+   <h3>Fwog</h3><p>Makers Massive Monthly 8 Hour Jam</p>
+  </a>
+ </div>
+</section>
+
+<footer id="contact">
+ <div class="footer-inner">
+  <h2>Let’s work together</h2>
+  <div>
+   <ul class="contact">
+    <li><span>Email</span><a href="mailto:emberwjones@gmail.com">emberwjones@gmail.com</a></li>
+    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ember-jones-5384682a9/" target="_blank" rel="noopener">linkedin.com/in/ember-jones-5384682a9</a></li>
+    <li><span>itch.io</span><a href="https://emberjones.itch.io/" target="_blank" rel="noopener">emberjones.itch.io</a></li>
+   </ul>
+   <a class="button" href="mailto:emberwjones@gmail.com">Email me</a>
+  </div>
+ </div>
+</footer>
+</body>
+</html>
