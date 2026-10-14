@@ -3,17 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ember Jones | Game Developer Portfolio</title>
-    <meta name="description" content="Ember Jones is a game developer based in Cape Town, South Africa, working in C#, C++, Unity and Unreal Engine.">
+    <title>Ember Jones | Game Developer, Programmer</title>
+    <meta name="description" content="Ember Jones is a game developer based in Cape Town, building funky games in Unity and C#.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ember Jones | Game Developer, Programmer">
+    <meta property="og:description" content="I build funky games. Unity, C#, C++ and game jam projects.">
+    <meta property="og:url" content="https://emberjones.github.io/EmberJones/">
+    <meta property="og:image" content="https://emberjones.github.io/EmberJones/Images/headshot-crop.jpg">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #fdf6fa;
             --pink: #edbaba;
+            --soft: #f9e4e4;
             --ink: #2d2d2d;
-            --field: #f3f3f3
+            --shadow: 5px 5px 0 var(--ink)
         }
 
         * {
@@ -23,7 +31,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 80px
+            scroll-padding-top: 96px
         }
 
         @media (prefers-reduced-motion:reduce) {
@@ -48,48 +56,152 @@
         }
 
         h1, h2, h3 {
-            font-weight: 600
+            font-weight: 800
         }
 
-        .hero {
-            max-width: 1180px;
+        .wrap {
+            max-width: 1040px;
             margin: 0 auto;
-            padding: 100px 50px 40px;
+            padding: 0 24px
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--pink);
+            border-bottom: 2px solid var(--ink)
+        }
+
+            nav .wrap {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px 16px;
+                min-height: 72px;
+                padding-top: 10px;
+                padding-bottom: 10px
+            }
+
+        .logo {
+            font-weight: 800;
+            font-size: 20px;
+            text-decoration: none
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px
+        }
+
+        .pill {
+            display: inline-block;
+            padding: 4px 20px;
+            border: 2px solid var(--ink);
+            border-radius: 999px;
+            background: var(--bg);
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 24px;
+            text-decoration: none
+        }
+
+            .pill:hover {
+                background: var(--soft)
+            }
+
+            .pill.solid {
+                background: var(--ink);
+                color: #fff
+            }
+
+                .pill.solid:hover {
+                    background: #000
+                }
+
+        .hero {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 28px
+            gap: 48px;
+            padding-top: 72px;
+            padding-bottom: 16px
         }
 
-        .hero-text {
-            flex: 1 1 480px;
-            max-width: 557px
+        .hero-left {
+            flex: 1 1 380px
         }
 
-        h1 {
-            font-size: clamp(34px,5vw,48px);
-            line-height: 1.25;
-            margin-bottom: 8px
+        .name {
+            display: inline-block;
+            font-size: clamp(38px,6vw,68px);
+            line-height: 1.1;
+            padding: 12px 30px;
+            background: var(--pink);
+            border: 2px solid var(--ink);
+            border-radius: 24px;
+            box-shadow: var(--shadow)
         }
 
         .role {
+            margin-top: 28px;
             font-size: 24px;
             line-height: 32px;
-            font-weight: 600;
-            margin-bottom: 40px
+            font-weight: 600
         }
 
-        .hero p + p {
-            margin-top: 27px
+        .tagline {
+            margin-top: 10px;
+            max-width: 470px;
+            font-size: clamp(26px,3.6vw,36px);
+            line-height: 1.2;
+            font-weight: 800
         }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 32px
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border: 2px solid var(--ink);
+            border-radius: 999px;
+            background: var(--bg);
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 4px 4px 0 var(--ink)
+        }
+
+            .btn.solid {
+                background: var(--ink);
+                color: #fff;
+                box-shadow: 4px 4px 0 var(--pink)
+            }
+
+            .btn:hover {
+                box-shadow: 2px 2px 0 var(--ink)
+            }
+
+            .btn.solid:hover {
+                box-shadow: 2px 2px 0 var(--pink)
+            }
 
         .photo {
-            flex: 0 1 495px;
+            flex: 0 1 420px;
             aspect-ratio: 495/424;
             border: 22px solid var(--pink);
             border-radius: 250px;
             overflow: hidden;
-            background: var(--pink)
+            background: var(--pink);
+            box-shadow: 0 0 0 2px var(--ink),6px 6px 0 2px var(--ink)
         }
 
             .photo img {
@@ -100,333 +212,295 @@
                 object-position: center
             }
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            background: var(--pink);
-            min-height: 80px;
-            padding: 0 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 24px
+        @media (prefers-reduced-motion:no-preference) {
+            .btn {
+                transition: transform .15s,box-shadow .15s
+            }
+
+                .btn:hover {
+                    transform: translate(2px,2px)
+                }
         }
 
-            nav .logo {
-                font-size: 20px;
-                line-height: 30px;
-                font-weight: 600;
-                text-decoration: none
-            }
+        .panel {
+            position: relative;
+            width: min(1000px,calc(100% - 48px));
+            margin: 96px auto 0;
+            background: var(--soft);
+            border: 2px solid var(--ink);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            padding: 64px 40px 40px
+        }
 
-            nav ul {
-                list-style: none;
-                padding: 0;
-                display: flex;
-                gap: 40px
-            }
+        .tab {
+            position: absolute;
+            top: -22px;
+            left: 32px;
+            background: var(--pink);
+            border: 2px solid var(--ink);
+            border-radius: 999px;
+            padding: 4px 26px;
+            font-size: 22px;
+            line-height: 32px
+        }
 
-                nav ul a {
-                    text-decoration: none
-                }
+        .panel p + p {
+            margin-top: 20px
+        }
 
-                    nav ul a:hover {
-                        text-decoration: underline
-                    }
-
-        .skills {
+        .what {
             display: grid;
-            grid-template-columns: repeat(3,minmax(0,300px));
-            gap: 80px;
-            justify-content: center;
-            padding: 60px 24px 90px;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 32px;
+            margin-top: 44px;
             text-align: center
         }
 
-            .skills img {
-                width: 130px;
-                height: 130px;
-                object-fit: cover;
-                margin-bottom: 56px
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--ink);
+            display: grid;
+            place-items: center;
+            margin: 0 auto 18px
+        }
+
+            .icon img {
+                width: 68px;
+                height: 68px;
+                object-fit: contain
             }
 
-        h3 {
-            font-size: 27px;
-            line-height: 42px;
-            margin-bottom: 19px
+        .what h3, .tools h3 {
+            font-size: 22px;
+            line-height: 32px
         }
 
-        .skills h3 {
-            font-size: clamp(22px,2.4vw,27px);
-            white-space: nowrap
+        .what p {
+            margin-top: 6px;
+            font-size: 16px;
+            line-height: 25px
         }
 
-        .skills p {
-            max-width: 250px;
-            margin: 0 auto
+        .tools {
+            margin-top: 44px
         }
 
-        .divider {
-            max-width: 1000px;
-            margin: 0 auto 90px;
-            border: 0;
-            border-top: 2px solid rgba(0,0,0,.2)
+        .tags {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px
         }
 
-        #work {
-            padding: 0 24px;
-            scroll-margin-top: 20px
-        }
+            .tags li {
+                border: 2px solid var(--ink);
+                border-radius: 999px;
+                background: var(--bg);
+                padding: 2px 16px;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 26px
+            }
 
-        h2 {
-            font-size: 32px;
-            line-height: 42px
-        }
-
-        #work h2 {
-            text-align: center;
-            margin-bottom: 60px
-        }
-
-        .games {
+        .project {
             display: grid;
-            grid-template-columns: repeat(3,minmax(0,315px));
-            gap: 67px;
-            justify-content: center;
-            margin-bottom: 120px
+            grid-template-columns: minmax(0,340px) minmax(0,1fr);
+            gap: 36px;
+            align-items: start
         }
 
-        .game {
-            display: block;
-            text-decoration: none
-        }
+            .project + .project {
+                margin-top: 44px;
+                padding-top: 44px;
+                border-top: 2px dashed rgba(45,45,45,.35)
+            }
 
-            .game img {
+            .project img {
                 display: block;
                 width: 100%;
                 aspect-ratio: 63/50;
                 object-fit: cover;
-                background: var(--field);
-                margin-bottom: 25px
+                border: 2px solid var(--ink);
+                border-radius: 16px;
+                box-shadow: var(--shadow);
+                background: var(--bg)
             }
 
-            .game h3 {
-                font-size: 20px;
-                line-height: 30px;
-                margin-bottom: 10px
+            .project h3 {
+                font-size: 28px;
+                line-height: 36px
             }
 
-            .game:hover h3 {
-                text-decoration: underline
-            }
+        .meta {
+            margin: 4px 0 14px;
+            font-size: 15px;
+            line-height: 23px
+        }
 
-            .game .cta {
-                display: inline-block;
-                margin-top: 14px;
-                font-weight: 600;
-                font-size: 15px;
-                line-height: 22px;
-                border-bottom: 2px solid var(--pink)
-            }
+        .project .payoff {
+            font-size: 16px
+        }
 
-            .game img {
-                box-shadow: 0 0 0 rgba(0,0,0,0)
-            }
+        .project .tags {
+            margin: 18px 0
+        }
 
-            .game:hover img, .game:focus-visible img {
-                box-shadow: 0 12px 28px rgba(45,45,45,.22)
-            }
-
-            .game:hover .cta {
-                background: var(--pink)
-            }
-
-        @media (prefers-reduced-motion:no-preference) {
-            .game {
-                transition: transform .2s ease
-            }
-
-                .game img {
-                    transition: box-shadow .2s ease
-                }
-
-                .game:hover, .game:focus-visible {
-                    transform: translateY(-6px)
-                }
+        .contact {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 24px
         }
 
         footer {
-            padding: 0 24px 70px
+            padding: 80px 24px 48px;
+            text-align: center;
+            font-size: 15px
         }
 
-        .footer-inner {
-            max-width: 1000px;
-            margin: 0 auto;
-            border-top: 2px solid rgba(0,0,0,.2);
-            padding-top: 70px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 48px
-        }
-
-            .footer-inner h2 {
-                flex: 1 1 280px;
-                max-width: 360px
-            }
-
-        .contact {
-            flex: 1 1 360px;
-            max-width: 530px;
-            list-style: none;
-            padding: 0;
-            display: grid;
-            gap: 20px
-        }
-
-            .contact li {
-                background: var(--field);
-                padding: 21px 30px;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 4px 16px
-            }
-
-            .contact span {
-                min-width: 70px
-            }
-
-            .contact a {
-                overflow-wrap: anywhere
-            }
-
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            background: var(--ink);
-            color: #fff;
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 30px;
-            padding: 25px 82px;
-            text-decoration: none
-        }
-
-            .button:hover {
-                background: #000
-            }
-
-        @media (max-width:900px) {
+        @media (max-width:800px) {
             .hero {
                 flex-direction: column;
-                padding: 56px 24px 32px;
-                align-items: stretch
-            }
-
-            .hero-text {
-                max-width: none;
-                flex: none
+                align-items: stretch;
+                gap: 36px;
+                padding-top: 40px
             }
 
             .photo {
                 align-self: center;
                 width: 100%;
-                max-width: 420px;
+                max-width: 380px;
                 flex: none
             }
 
-            nav {
-                padding: 0 24px
+            .panel {
+                padding: 56px 22px 28px;
+                margin-top: 80px
             }
 
-                nav ul {
-                    gap: 24px
-                }
+            .tab {
+                left: 20px
+            }
 
-            .skills {
+            .what {
+                grid-template-columns: 1fr
+            }
+
+            .project {
                 grid-template-columns: 1fr;
-                gap: 64px;
-                padding: 40px 24px 64px
-            }
-
-            .divider {
-                margin-bottom: 64px
-            }
-
-            .games {
-                margin-bottom: 80px
-            }
-
-            .games {
-                grid-template-columns: minmax(0,420px);
-                gap: 48px
-            }
-
-            .button {
-                padding: 20px 48px
+                gap: 22px
             }
         }
     </style>
 </head>
 <body>
     <nav aria-label="Main">
-        <a class="logo" href="#about">Ember Jones</a>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="wrap">
+            <a class="logo" href="#top">Ember Jones</a>
+            <ul>
+                <li><a class="pill" href="#about">About</a></li>
+                <li><a class="pill" href="#work">Work</a></li>
+                <li><a class="pill" href="#contact">Contact</a></li>
+                <li><a class="pill solid" href="Ember-Jones-CV.pdf" download>CV</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <header class="hero" id="about">
-        <div class="hero-text">
-            <h1>Ember Jones</h1>
-            <p class="role">Game Developer</p>
-            <p>I’m Ember Jones, a programmer and game developer based in Cape Town, South Africa. I’m completing my BCIS in Game Design and Development at Vega and am open to work opportunities as a game developer.</p>
-            <p>Proficient in C# and C++, with experience in Unity and Unreal Engine, I enjoy collaborating with artists, composers and designers to bring shared ideas to life. I make silly, light-hearted games with offbeat mechanics, and I’m especially interested in procedural generation and storytelling through gameplay.</p>
+    <header class="wrap hero" id="top">
+        <div class="hero-left">
+            <h1 class="name">Ember Jones</h1>
+            <p class="role">Game Developer, Programmer</p>
+            <p class="tagline">I build funky games.</p>
+            <div class="cta-row">
+                <a class="btn solid" href="#work">See my work</a>
+                <a class="btn" href="Ember-Jones-CV.pdf" download>Download CV</a>
+            </div>
         </div>
         <div class="photo"><img src="Images/headshot-crop.jpg" alt="Ember Jones smiling and giving a thumbs up"></div>
     </header>
 
-    <section class="skills" aria-label="Skills">
-        <div><img src="Images/icon-game-development.png" alt=""><h3>Game Development</h3><p>Experienced in Unity and Unreal Engine 5.</p></div>
-        <div><img src="Images/icon-game-design.png" alt=""><h3>Game Design</h3><p>Taken part in designing game prototypes in multiple game jams, mostly working on 3D physics-based simulators.</p></div>
-        <div><img src="Images/icon-programming.png" alt=""><h3>Programming</h3><p>Experienced in C++, C# and Java.</p></div>
-    </section>
-
-    <hr class="divider">
-
-    <section id="work">
-        <h2>My games</h2>
-        <div class="games">
-            <a class="game" href="https://cragels.itch.io/2skate" target="_blank" rel="noopener">
-                <img src="Images/game-2skate.png" alt="2Skate title screen with neon lettering">
-                <h3>2Skate</h3><p>2026 Physics Game Jam</p><span class="cta">View on itch.io ↗</span>
-            </a>
-            <a class="game" href="https://devillierscloete.itch.io/officehas2fs" target="_blank" rel="noopener">
-                <img src="Images/game-Office-Has-2-Fs.png" alt="Office Has 2 F’s cover art with two suited characters">
-                <h3>Office has 2 F’s</h3><p>The Campus Game Jam 2026</p><span class="cta">View on itch.io ↗</span>
-            </a>
-            <a class="game" href="https://emberjones.itch.io/fwog" target="_blank" rel="noopener">
-                <img src="Images/game-fwog.png" alt="Fwog cover art showing a frog on a lily pad">
-                <h3>Fwog</h3><p>Makers Massive Monthly 8 Hour Jam</p><span class="cta">View on itch.io ↗</span>
-            </a>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="footer-inner">
-            <h2>Let’s work together</h2>
-            <div>
-                <ul class="contact">
-                    <li><span>Email</span><a href="mailto:emberwjones@gmail.com">emberwjones@gmail.com</a></li>
-                    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/ember-jones-5384682a9/" target="_blank" rel="noopener">linkedin.com/in/ember-jones-5384682a9</a></li>
-                    <li><span>itch.io</span><a href="https://emberjones.itch.io/" target="_blank" rel="noopener">emberjones.itch.io</a></li>
-                </ul>
-                <a class="button" href="mailto:emberwjones@gmail.com">Email me</a>
+    <main>
+        <section class="panel" id="about" aria-labelledby="about-h">
+            <h2 class="tab" id="about-h">About</h2>
+            <p>I’m Ember Jones, a programmer and game developer based in Cape Town, South Africa. I’m completing my BCIS in Game Design and Development at Vega and am open to work opportunities as a game developer.</p>
+            <p>Proficient in C# and C++, with experience in Unity and Unreal Engine, I enjoy collaborating with artists, composers and designers to bring shared ideas to life. I make silly, light-hearted games with offbeat mechanics, and I’m especially interested in procedural generation and storytelling through gameplay.</p>
+            <div class="what">
+                <div><div class="icon"><img src="Images/icon-game-development.png" alt=""></div><h3>Game Development</h3><p>Experienced in Unity and Unreal Engine 5.</p></div>
+                <div><div class="icon"><img src="Images/icon-game-design.png" alt=""></div><h3>Game Design</h3><p>Taken part in designing game prototypes in multiple game jams, mostly working on 3D physics-based simulators.</p></div>
+                <div><div class="icon"><img src="Images/icon-programming.png" alt=""></div><h3>Programming</h3><p>Experienced in C++, C# and Java.</p></div>
             </div>
-        </div>
-    </footer>
+            <div class="tools">
+                <h3>Skills &amp; tools</h3>
+                <ul class="tags">
+                    <li>Unity</li>
+                    <li>Unreal Engine 5</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Physics &amp; ragdolls</li>
+                    <li>Procedural generation</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="panel" id="work" aria-labelledby="work-h">
+            <h2 class="tab" id="work-h">Work</h2>
+
+            <article class="project">
+                <a href="https://cragels.itch.io/2skate" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="Images/game-2skate.png" alt="2Skate title screen with neon lettering"></a>
+                <div>
+                    <h3>2Skate</h3>
+                    <p class="meta">2026 Physics Game Jam · 7 days · with Craig Harrod, Kaellum Alves and Devilliers Cloete</p>
+                    <p>I focused on programming the movement of each rollerskate separately, and on setting up and debugging the character’s collisions with the environment. I also fixed several major bugs involving clipping, gliding and force application.</p>
+                    <p class="payoff">Two separately controlled skates, wheel colliders and a ragdoll body that has to stay believable on top of both.</p>
+                    <ul class="tags"><li>Unity</li><li>C#</li><li>Ragdoll physics</li><li>Wheel colliders</li></ul>
+                    <a class="pill solid" href="https://cragels.itch.io/2skate" target="_blank" rel="noopener">Play on itch.io ↗</a>
+                </div>
+            </article>
+
+            <article class="project">
+                <a href="https://devillierscloete.itch.io/officehas2fs" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="Images/game-Office-Has-2-Fs.png" alt="Office Has 2 F’s cover art with two suited characters"></a>
+                <div>
+                    <h3>Office Has 2 F’s</h3>
+                    <p class="meta">The Campus Game Jam 2026 · ~50 hours · with Devilliers Cloete and Jonty de Longchamps</p>
+                    <p>A satirical first-person bullet-hell about reflecting the bullets that corporate workers fire at you. I focused on the movement mechanics, the time-slow combat mechanic and its visual effects, and parts of the level layout such as enemy placements and respawn locations.</p>
+                    <ul class="tags"><li>Unity</li><li>C#</li><li>Movement</li><li>Time-slow mechanic</li><li>VFX</li></ul>
+                    <a class="pill solid" href="https://devillierscloete.itch.io/officehas2fs" target="_blank" rel="noopener">Play on itch.io ↗</a>
+                </div>
+            </article>
+
+            <article class="project">
+                <a href="https://emberjones.itch.io/fwog" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="Images/game-fwog.png" alt="Fwog cover art showing a frog on a lily pad"></a>
+                <div>
+                    <h3>Fwog</h3>
+                    <p class="meta">Makers Massive Monthly 8 Hour Jam · with Viwe Mama and Matthew Tromp</p>
+                    <p>A puzzle game where you move the lilypads to connect Fwog to her flowers. I created the assets in Blender and implemented the game mechanics, UI and music in Unity. This was a really fun stress-test for me to see what I could achieve from nothing other than a theme - "connections". While I would have loved to add animations, SFX and VFX, I'm really proud with what I was able to make in the limited 8 hours that I had at the time.'</p>
+                    <ul class="tags"><li>Unity</li><li>Puzzle game</li><li>Web Build</li><li>Physics</li></ul>
+                    <a class="pill solid" href="https://emberjones.itch.io/fwog" target="_blank" rel="noopener">Play on itch.io ↗</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="panel" id="contact" aria-labelledby="contact-h">
+            <h2 class="tab" id="contact-h">Contact</h2>
+            <p>Let’s make something cool together!</p>
+            <ul class="contact">
+                <li><a class="btn solid" href="mailto:emberwjones@gmail.com">emberwjones@gmail.com</a></li>
+                <li><a class="btn" href="https://www.linkedin.com/in/ember-jones-5384682a9/" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a class="btn" href="https://emberjones.itch.io/" target="_blank" rel="noopener">itch.io</a></li>
+                <li><a class="btn" href="Ember-Jones-CV.pdf" download>Download CV</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer><p>© 2026 Ember Jones</p></footer>
 </body>
 </html>
