@@ -69,6 +69,13 @@
         h1 {
             font-size: clamp(34px,5vw,48px);
             line-height: 1.25;
+            margin-bottom: 8px
+        }
+
+        .role {
+            font-size: 24px;
+            line-height: 32px;
+            font-weight: 600;
             margin-bottom: 40px
         }
 
@@ -214,6 +221,41 @@
                 text-decoration: underline
             }
 
+            .game .cta {
+                display: inline-block;
+                margin-top: 14px;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 22px;
+                border-bottom: 2px solid var(--pink)
+            }
+
+            .game img {
+                box-shadow: 0 0 0 rgba(0,0,0,0)
+            }
+
+            .game:hover img, .game:focus-visible img {
+                box-shadow: 0 12px 28px rgba(45,45,45,.22)
+            }
+
+            .game:hover .cta {
+                background: var(--pink)
+            }
+
+        @media (prefers-reduced-motion:no-preference) {
+            .game {
+                transition: transform .2s ease
+            }
+
+                .game img {
+                    transition: box-shadow .2s ease
+                }
+
+                .game:hover, .game:focus-visible {
+                    transform: translateY(-6px)
+                }
+        }
+
         footer {
             padding: 0 24px 70px
         }
@@ -339,7 +381,8 @@
 
     <header class="hero" id="about">
         <div class="hero-text">
-            <h1>Game Development Portfolio</h1>
+            <h1>Ember Jones</h1>
+            <p class="role">Game Developer</p>
             <p>I’m Ember Jones, a programmer and game developer based in Cape Town, South Africa. I’m completing my BCIS in Game Design and Development at Vega and am open to work opportunities as a game developer.</p>
             <p>Proficient in C# and C++, with experience in Unity and Unreal Engine, I enjoy collaborating with artists, composers and designers to bring shared ideas to life. I make silly, light-hearted games with offbeat mechanics, and I’m especially interested in procedural generation and storytelling through gameplay.</p>
         </div>
@@ -359,15 +402,15 @@
         <div class="games">
             <a class="game" href="https://cragels.itch.io/2skate" target="_blank" rel="noopener">
                 <img src="Images/game-2skate.png" alt="2Skate title screen with neon lettering">
-                <h3>2Skate</h3><p>2026 Physics Game Jam</p>
+                <h3>2Skate</h3><p>2026 Physics Game Jam</p><span class="cta">View on itch.io ↗</span>
             </a>
             <a class="game" href="https://devillierscloete.itch.io/officehas2fs" target="_blank" rel="noopener">
                 <img src="Images/game-Office-Has-2-Fs.png" alt="Office Has 2 F’s cover art with two suited characters">
-                <h3>Office has 2 F’s</h3><p>The Campus Game Jam 2026</p>
+                <h3>Office has 2 F’s</h3><p>The Campus Game Jam 2026</p><span class="cta">View on itch.io ↗</span>
             </a>
             <a class="game" href="https://emberjones.itch.io/fwog" target="_blank" rel="noopener">
                 <img src="Images/game-fwog.png" alt="Fwog cover art showing a frog on a lily pad">
-                <h3>Fwog</h3><p>Makers Massive Monthly 8 Hour Jam</p>
+                <h3>Fwog</h3><p>Makers Massive Monthly 8 Hour Jam</p><span class="cta">View on itch.io ↗</span>
             </a>
         </div>
     </section>
